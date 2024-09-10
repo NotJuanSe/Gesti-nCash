@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestiónCash</title>
+    <link rel="stylesheet" href="./CSS/pruebas.css">
+    <link rel="icon" href="./IMG/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <nav class="navbar">
+            <div class="nav-items">
+            <a href="#" class="nav-link" id="">Quienes Somos</a>
+            <a href="#CRUD" class="nav-link" id="">Agregar gasto</a>
+
+            <a href="#" class="nav-link" id="login-btn">Login</a>
+            <a href="#" class="nav-link" id="register-btn">Registro</a>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="login-sidebar">
+        <button class="close-btn" id="close-login-btn">&times;</button>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="sidebar" id="register-sidebar">
+        <button class="close-btn" id="close-register-btn">&times;</button>
+        <div class="login-container">
+            <h2>Registro</h2>
+            <form id="registrationForm">
+                <div class="input-group">
+                    <input type="text" name="nombre" required>
+                    <label>Nombre Completo:</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="identificacion" required>
+                    <label>Identificación:</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label>Correo electrónico:</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label>Contraseña:</label>
+                </div>
+                <div class="input-group">
+                    <input type="date" name="fecha_nacimiento" required>
+                    <label>Fecha de nacimiento:</label>
+                </div>
+                <div class="input-group">
+                    <select name="genero" required>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="otro">35 Tipos de Gay</option>
+                    </select>
+                    <label>Género:</label>
+                </div>
+                <div class="input-group">
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <header class="banner">
+        <div class="banner-content">
+        </div>
+    </header>
+
+    <section id="quienes-somos"></section>
+        <div class="container_qs">
+            <h1>Quiénes Somos</h1>
+            <p>Bienvenidos a <strong>GestiónCash</strong></p>
+            <p>En <strong>GestiónCash</strong>, nuestra misión es hacer que la gestión de tus finanzas diarias sea más sencilla y eficiente. Creemos que un buen control de los gastos es la clave para alcanzar tus metas financieras y lograr una vida económica más equilibrada.</p>
+
+            <h2>¿Quiénes Somos?</h2>
+            <p>Somos un equipo apasionado de expertos en finanzas y tecnología con un objetivo claro: brindarte las herramientas necesarias para que tengas un control total sobre tu dinero. Con años de experiencia en el sector financiero y en desarrollo de software, hemos creado una plataforma intuitiva y poderosa diseñada para ayudarte a:</p>
+            <ul>
+                <li><strong>Registrar y Categorizar Gastos:</strong> Controla todos tus gastos de manera fácil y rápida, organizándolos en categorías personalizables.</li>
+                <li><strong>Visualizar tu Presupuesto:</strong> Obtén una visión clara de tu situación financiera con gráficos y reportes detallados que te permiten tomar decisiones informadas.</li>
+                <li><strong>Optimizar tus Ahorros:</strong> Identifica oportunidades para ahorrar más y gastar de manera inteligente con nuestras recomendaciones personalizadas.</li>
+            </ul>
+
+            <h2>Nuestro Compromiso</h2>
+            <p>En <strong>GestiónCash</strong>, estamos comprometidos con la transparencia, la seguridad y la innovación. Trabajamos constantemente para mejorar nuestra plataforma y ofrecerte la mejor experiencia posible. Nuestro equipo está siempre disponible para resolver tus dudas y ayudarte a aprovechar al máximo nuestras herramientas.</p>
+
+            <h2>Por Qué Elegirnos</h2>
+            <ul>
+                <li><strong>Simplicidad y Eficiencia:</strong> Hemos diseñado nuestra plataforma para que sea fácil de usar, incluso si no eres un experto en finanzas.</li>
+                <li><strong>Seguridad de Primer Nivel:</strong> Tu información financiera está protegida con las mejores medidas de seguridad para garantizar tu tranquilidad.</li>
+                <li><strong>Innovación Continua:</strong> Estamos en constante evolución, incorporando nuevas funcionalidades y mejoras basadas en tus necesidades y en las tendencias del mercado.</li>
+            </ul>
+
+            <p>Únete a <strong>GestiónCash</strong> hoy mismo y empieza a tomar el control de tus finanzas. Juntos, podemos transformar la manera en que gestionas tu dinero y ayudarte a alcanzar tus objetivos financieros con confianza.</p>
+
+            <p><strong>¡Gracias por confiar en nosotros!</strong></p>
+        </div>
+    </section>
+
+    <hr>
+    <div class="content">
+        <h1 id="CRUD">Gestor de Gastos</h1>
+        <br>
+        <form id="productForm"> 
+            <input type="hidden" id="productId" name="productId">
+            <label for="productName">Nombre del gasto:</label>
+            <input type="text" id="productName" name="productName" required>
+            <label for="productPrice">Precio:</label>
+            <input type="number" id="productPrice" name="productPrice" required>
+            <label for="productSKU">Fecha</label>
+            <input type="date" id="productSKU" name="productSKU" required>
+            <label for="productImage">Imagen del voucher (Opcional):</label>
+            <input type="file" accept="image/*"  id="productImage" name="productImage">
+            <button type="submit">Agregar/Actualizar gasto</button>
+
+        </form>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Tipo</th>
+                    <th>Foto del voucher</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <br>
+    <hr>
+<p>Diseñador: Juan Sebastian Betancur Quintero, Diego Hinestroza, Juan Esteban Blandon</p>
+<p>Fecha y hora: <script>
+    let now = new Date();"dd/mm/aaaa"
+    let date = now.toLocaleDateString();
+    let time = now.toLocaleTimeString();
+    document.write(date + ' ' + time);
+    </script></p>
+    <p>Programa: Desarrollo de Software</p>
+<br>
+<img src="img/logo_cesde.png" alt="logo_cesde">
+</footer>
+    <script src="./JS/pruebas.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
